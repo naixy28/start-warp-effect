@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import { init } from "../space";
+import { init } from "../space/interactive";
 
 export default function Home() {
   useEffect(() => {
@@ -8,7 +8,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div style={{ background: "black" }}>
       <canvas id="hyperspeed-canvas"></canvas>
     </div>
   );
