@@ -14,12 +14,12 @@ export const Routes: FC = () => {
 
   return (
     <div className="fixed bottom-4 left-4">
-      <div className="text-white hover:cursor-pointer  font-medium font-mono ">
+      <div className="text-white hover:cursor-pointer  font-medium font-mono flex flex-col items-start">
         {Object.entries(routeConfig).map(([key, val]) => (
           <div
             className={cls(
-              'before:content-[">"] before:mr-2 mt-3 opacity-70 hover:opacity-100 transition-opacity leading-5',
-              pathname === key ? "opacity-100" : ""
+              'before:content-[">"] before:mr-2 mt-3 text-white/0 hover:text-white/100 transition-colors leading-5 backdrop-blur-[4px] [text-shadow:0_0_3px_white]',
+              pathname === key ? "text-white/100" : ""
             )}
             key={key}
             onClick={() => router.push(key)}
