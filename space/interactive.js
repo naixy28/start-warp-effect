@@ -101,8 +101,10 @@ export function init() {
     while (i--) {
       var p = points[i];
       p.s = fl / (fl + p.z);
+      // p.sx = p.x * Math.sqrt(p.s);
+      // p.sy = p.y * Math.sqrt(p.s);
       p.sx = p.x * Math.sqrt(p.s);
-      p.sy = p.y * Math.sqrt(p.s);
+      p.sy = p.y * p.s;
       // console.log(p.s, p.sx, p.sy);
       p.alpha = (bounds.z.max - p.z) / (bounds.z.max / 2);
       ctx.beginPath();
